@@ -15,7 +15,7 @@ IMHO: From an end user's perspective, GVT-g remains attractive because the hardw
 This guide is based on the excellent work of Pavolelsigs. See <https://github.com/pavolelsig/Ubuntu_GVT-g_helper>. 
 His work is now five years old, hence this guide.
 
-# General
+## General
 
 Tested on Ubuntu 25.04. The VM is using KVM, qemu, libvirt with virt-manager as graphical frontend. The guest is Windows 10.
 
