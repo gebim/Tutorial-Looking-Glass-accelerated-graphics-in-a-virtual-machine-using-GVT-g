@@ -21,7 +21,7 @@ Tested on Ubuntu 25.04. The VM is using KVM, qemu, libvirt with virt-manager as 
 
 ## Prerequisite
 
-You already have a running virtual machine of Windows 10 with virt-manager as frontend for QEMU. How to prepare a Windows 10 VM in KVM/Virt-manager is not covered here, but there are many excellent guides  e.g. <https://gitlab.com/Luxuride/VFIO-Windows-install-walkthrough/-/blob/master/VmInstall.md>. As shown in this guide is is recommended to use the virtIO Windows drivers (<https://pve.proxmox.com/wiki/Windows_VirtIO_Drivers#Using_the_ISO>). It enables direct access to devices and peripherals for virtual machines, instead of slower, emulated, ones.
+You already have a running virtual machine of Windows 10 with virt-manager as frontend for QEMU. How to prepare a Windows 10 VM in KVM/Virt-manager is not covered here, but there are many excellent guides  e.g. <https://gitlab.com/Luxuride/VFIO-Windows-install-walkthrough/-/blob/master/VmInstall.md>. As shown in this guide use the virtIO Windows drivers (<https://pve.proxmox.com/wiki/Windows_VirtIO_Drivers#Using_the_ISO>). It enables direct access to devices and peripherals for virtual machines, instead of slower, emulated, ones.
 
 Note: any 64-bit version of Windows 10 should work, but Windows 10 LTSC is recommended. Windows 10 LTSC is an interesting release as it does not require secure boot, offers more predictable updates, and has an extended support period. More information can be easily found on github.
 
