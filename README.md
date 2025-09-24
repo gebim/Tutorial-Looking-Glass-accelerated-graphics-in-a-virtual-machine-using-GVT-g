@@ -1,7 +1,7 @@
 Looking Glass: tutorial for accelerated graphics in a KVM virtual machine using GVT-g (intel Core CPUs gen. 5-9)
 =======================================================
 
-This guide explains how to install Looking Glass (LG), which provides an accelerated graphics for a virtual machine running Windows 10 via iGPU passthrough, while maintaining graphical output on the Linux host. 
+This tutorial shows howto install Looking Glass (LG), which uses iGPU passthrough to provide accelerated graphics for a Windows 10 virtual machine, while maintaining graphical output on the Linux desktop.
 
 The [looking glass](https://looking-glass.io/) website brings this technology to the point: 
 
