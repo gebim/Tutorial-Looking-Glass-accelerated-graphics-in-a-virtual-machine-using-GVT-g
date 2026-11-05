@@ -29,7 +29,9 @@ From an end-user perspective, GVT-g remains an attractive solution:
 
 Intel has discontinued GVT-g in favor of **SR-IOV (Single Root I/O Virtualization)**. However, official SR-IOV support for Intel integrated graphics remains somewhat fragmented.
 
-Intel has announced SR-IOV capabilities for its upcoming Panther Lake processors with Xe3 integrated graphics. For further details, see [Phoronix: Intel SR-IOV Support](https://www.phoronix.com/news/Intel-SR-IOV-PTL-ARL-State).
+Intel has announced SR-IOV capabilities for its upcoming Panther Lake processors with Xe3 integrated graphics. For further details, see [Phoronix: Intel SR-IOV Support](https://www.phoronix.com/news/Intel-SR-IOV-PTL-ARL-State). 
+
+**Update**: Intel Nova Lake S & Nova Lake P To Support SR-IOV with Xe Graphics https://www.phoronix.com/news/Intel-Nova-Lake-SR-IOV-Xe
 
 ## About This Guide
 
