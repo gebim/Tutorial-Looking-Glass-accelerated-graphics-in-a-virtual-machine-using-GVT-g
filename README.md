@@ -23,16 +23,13 @@ The result is a Windows desktop with hardware-accelerated graphics running seaml
 
 From an end-user perspective, GVT-g remains an attractive solution:
 
-- **Affordable hardware:** Compatible Intel Core processors are widely available at low cost.
-- **Adequate performance:** GPU acceleration is sufficient for many desktop applications.
-- **Mature software support:** GVT-g is well supported by the Linux virtualization stack on compatible systems.
-- **Seamless integration:** Windows applications can run alongside Linux applications without dual booting.
+- **Cheap hardware:** especially on the second-hand market.
+- **Adequate performance:** for many use cases.
+- **Mature software support:** GVT-g is well supported on these older Intel Core CPUs.
 
 Intel has discontinued GVT-g in favor of **SR-IOV (Single Root I/O Virtualization)**. However, official SR-IOV support for Intel integrated graphics remains somewhat fragmented.
 
 Intel has announced SR-IOV capabilities for its upcoming Panther Lake processors with Xe3 integrated graphics. For further details, see [Phoronix: Intel SR-IOV Support](https://www.phoronix.com/news/Intel-SR-IOV-PTL-ARL-State).
-
-For users with compatible older hardware, GVT-g therefore remains a practical alternative.
 
 ## About This Guide
 
