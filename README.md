@@ -84,7 +84,7 @@ Check if your intel CPU if is gen 5-9: `cat /proc/cpuinfo`
     Typically this looks like: `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash intel_iommu=on i915.enable_gvt=1 kvm.ignore_msrs=1"`
     * After modifying the grub config, it is important run `update-grub` with no errors. 
     
-* Loading of the kernel module `kvgt`. To load `kvgt` during the boot, create the file `/etc/modules-load.d/kvmgt.conf` and populate it with:
+* Loading of the kernel module `kvmgt`. To load `kvmgt` during the boot, create the file `/etc/modules-load.d/kvmgt.conf` and populate it with:
 	```
 		# KVMGT kernel module
 		kvmgt
@@ -96,7 +96,7 @@ Note: `kvmgt` depends on `i915, vfio, kvm, mdev` and hence, these modules will b
 
 ## Create the mediated virtual GPU
 
-* Check whether the mediated virtual GPU devices (mdev) are available. Run `find /sys/devices/pci* -name 'mdev_supported_types'`. A typical output is: `/sys/devices/pci0000:00/0000:00:02.0/mdev_supported_types`. `cd` into this directory, and you'll see several directories: `i915-GVTg_V5_4  i915-GVTg_V5_8`. Each directory contains a `description`. For example `less /sys/devices/pci0000:00/0000:00:02.0/mdev_supported_types/i915-GVTg_V5_4/description` shows:
+* Check whether the mediated virtual GPU devices (mdev) are available. Run `find /sys/devices/pci* -name 'mdev_supported_types'`. A typical output: `/sys/devices/pci0000:00/0000:00:02.0/mdev_supported_types`. `cd` into this directory, and you'll see several directories: `i915-GVTg_V5_4  i915-GVTg_V5_8`. Each directory contains a `description`. For example `less /sys/devices/pci0000:00/0000:00:02.0/mdev_supported_types/i915-GVTg_V5_4/description` shows:
 ```
 low_gm_size: 128MB
 high_gm_size: 512MB
@@ -202,49 +202,6 @@ sleep 2s
 
 The graphics performance is excellent - close to bare metal.
 Many thanks to Geoffrey McRae and all the other contributors for their great work.
- 
-
-
-
-  
-
-
-
- 
-
-
-  
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
 
  
 
