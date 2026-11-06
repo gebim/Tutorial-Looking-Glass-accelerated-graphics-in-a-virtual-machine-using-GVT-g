@@ -15,7 +15,7 @@ As described on the [Looking Glass website](https://looking-glass.io/):
 
 This setup uses **Intel GVT-g**, a technology that enables mediated GPU passthrough on Intel Core processors (5th–9th generation). For technical details, see the [Arch Linux Wiki](https://wiki.archlinux.org/title/Intel_GVT-g).
 
-In practical terms, Windows 10 running inside the VM sees a virtualized Intel GPU and uses the standard, unmodified Intel graphics driver. Looking Glass then transfers the rendered frames to the Linux host with extremely low latency.
+In practice, Windows 10 running inside the VM sees a virtualised Intel GPU and uses the standard, unmodified Intel graphics driver. Looking Glass then transfers the rendered frames to the Linux host with extremely low latency.
 
 The result is a Windows desktop with hardware-accelerated graphics running seamlessly alongside native Linux applications.
 
@@ -27,7 +27,7 @@ From an end-user perspective, GVT-g remains an attractive solution:
 - **Adequate performance:** for many use cases.
 - **Mature software support:** GVT-g is well supported on these older Intel Core CPUs.
 
-Intel has discontinued GVT-g in favor of **SR-IOV (Single Root I/O Virtualization)**. However, official SR-IOV support for Intel integrated graphics remains somewhat fragmented.
+Intel has discontinued GVT-g in favour of **SR-IOV (Single Root I/O Virtualization)**. However, official SR-IOV support for Intel integrated graphics remains somewhat fragmented.
 
 Intel has announced SR-IOV capabilities for its upcoming Panther Lake processors with Xe3 integrated graphics. For further details, see [Phoronix: Intel SR-IOV Support](https://www.phoronix.com/news/Intel-SR-IOV-PTL-ARL-State). 
 
@@ -45,7 +45,7 @@ Tested on Ubuntu 25.04. The VM uses KVM, qemu, libvirt and virt-manager as a gra
 
 ## Prerequisite
 
-You already have a running virtual machine of Windows 10 with virt-manager as frontend for QEMU. How to prepare a Windows 10 VM in KVM/Virt-manager is not covered here, but there are many excellent guides  e.g. <https://gitlab.com/Luxuride/VFIO-Windows-install-walkthrough/-/blob/master/VmInstall.md>. As explained below, use the virtIO Windows drivers (<https://pve.proxmox.com/wiki/Windows_VirtIO_Drivers#Using_the_ISO>) to enable direct access to devices and peripherals, instead of slower, emulated ones.
+You already have a running virtual machine of Windows 10 with virt-manager as frontend for QEMU. How to prepare a Windows 10 VM in KVM/Virt-manager is not covered here, but there are many excellent guides  e.g. <https://gitlab.com/Luxuride/VFIO-Windows-install-walkthrough/-/blob/master/VmInstall.md>. As explained below, use the virtIO Windows drivers (<https://pve.proxmox.com/wiki/Windows_VirtIO_Drivers#Using_the_ISO>) to enable direct access to devices and peripherals, instead of slower, emulated ones. Prior the installation of win10 some configuration are necessary (i.e UEFI firmware). See screenshots given in an older version of this tutorial: <https://github.com/gebim/win10---GPU-passthrough-on-Ubuntu>
 
 Note: any 64-bit version of Windows 10 should work, but Windows 10 LTSC is recommended. Windows 10 LTSC is an interesting release as it does not require Secure Boot, offers more predictable updates, and has an extended support period. More information can be easily found on github.
 
