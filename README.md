@@ -203,6 +203,44 @@ sleep 2s
 The graphics performance is excellent - close to bare metal.
 Many thanks to Geoffrey McRae and all the other contributors for their great work.
 
+
+### Troubleshooting: KVMFR permission denied (Ubuntu 26.10)
+
+If QEMU fails to start with:
+
+```text
+can't open backing store /dev/kvmfr0 for guest RAM: Permission denied
+```
+
+the problem may be caused by libvirt's cgroup device restrictions, even if `/dev/kvmfr0` has the correct Unix permissions.
+
+Edit `/etc/libvirt/qemu.conf` and configure:
+
+```ini
+cgroup_device_acl = [
+    "/dev/null",
+    "/dev/full",
+    "/dev/zero",
+    "/dev/random",
+    "/dev/urandom",
+    "/dev/ptmx",
+    "/dev/userfaultfd",
+    "/dev/kvm",
+    "/dev/kvmfr0"
+]
+```
+
+Preserve any additional device entries required by your configuration.
+
+Restart libvirt:
+
+```bash
+sudo systemctl restart libvirtd.service
+```
+
+**Important:** Both `/dev/kvm` and `/dev/kvmfr0` must be accessible. Omitting `/dev/kvm` may prevent QEMU from initializing hardware acceleration.
+
+This configuration was successfully tested with Ubuntu 26.10, libvirt, QEMU, and Looking Glass B7.
  
 
 
